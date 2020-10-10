@@ -3,7 +3,8 @@ window.onload=function(){
     var board= document.getElementById("board");
     var squares=board.children;
     var gamestatus=document.getElementById("status");
-    var pturn=1;
+    var newgame=document.getElementsByClassName("btn");
+    newgame[0].onclick=function(){reloadpage()};
     const WINNING_COMBINATIONS = [
         [0, 1, 2],
         [3, 4, 5],
@@ -77,7 +78,9 @@ window.onload=function(){
         }
     }
         
-    
+    function reloadpage(){
+        location.reload();
+    }
   
    
 };
