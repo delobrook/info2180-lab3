@@ -37,7 +37,14 @@ window.onload=function(){
             squares[i].classList.remove("O");
            
         } 
-        setTimeout(winnercheck, 2000);
+
+        setTimeout(winnercheck, 2500);
+        setTimeout(clickTimer,1000); 
+        function clickTimer(){
+            squares[i].onclick=null;
+        }
+      
+        
     }
     function ccmover(i){
         squares[i].classList.add("hover");
@@ -81,6 +88,6 @@ window.onload=function(){
     function reloadpage(){
         location.reload();
     }
-  
+   
    
 };
